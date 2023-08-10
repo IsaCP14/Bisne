@@ -1,0 +1,126 @@
+main {
+    display: none;
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: #967D71;
+}
+
+.enlaces .contLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c4c4c4;
+    gap: 2rem;
+    height: 2px;
+}
+
+.contLine .iconos i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100px;
+    background-color: #c4c4c4;
+    color: #967D71;
+}
+
+.cajas {
+    display: flex;
+}
+
+.cajas .caja {
+    padding: 2rem;
+    width: 50vw;
+}
+
+.caja .descripcion {
+    width: 100%;
+    height: 15vh;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+}
+
+.caja .suma {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    margin-bottom: 0.3rem;
+}
+
+.caja .total {
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.caja .btnContinuar {
+    background-color: #9a6c6c;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: white;
+}
+
+@media (max-width: 480px) {
+
+    .enlaces .contLine {
+        gap: 1.5rem;
+    }
+
+    .contLine .iconos i {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+
+    .cajas {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .cajas .caja {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .caja .descripcion {
+        width: 80%;
+    }
+
+    .caja .suma {
+        width: 80%;
+    }
+
+    .caja .total {
+        width: 80%;
+    }
+
+    .caja .btnContinuar {
+        width: 80%;
+    }
+}

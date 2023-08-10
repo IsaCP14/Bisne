@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nombre": "Amalia",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Eloisa",
+        "precio": "9500",
+        "ancho": 55,
+        "alto": 80,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "nombre": "Gal",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 4,
+        "nombre": "Ariel",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 5,
+        "nombre": "Candela",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 6,
+        "nombre": "Gertrudis",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 7,
+        "nombre": "Ella",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 8,
+        "nombre": "Esther",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 9,
+        "nombre": "Yalin",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    },
+    {
+        "id": 10,
+        "nombre": "Julia",
+        "precio": "18000",
+        "ancho": 130,
+        "alto": 70,
+        "categoria": "Tapices",
+        "imagen": ""
+    }
+]

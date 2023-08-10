@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bisne macrame | HOME</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <%- include('./partials/header.ejs')%>
+        <main>
+            <aside id="mySidebar">
+                <div class="top-sidebar">
+                    <div class="search-input">
+                        <input type="text" placeholder="Buscar">
+                    </div>
+                    <div class="close-icon">
+                        <i class="fas fa-xmark" onclick="closeNav()"></i>
+                    </div>
+                </div>
+                <div class="main-sidebar">
+                    <ul class="main-menu">
+                        <li><a href="index">Inicio</a></li>
+                        <li class="menu-item"><a href="#">Categorías <span class="arrow">&#9658;</span></a>
+                            <ul class="submenu">
+                                <li><a href="#">Tapices</a></li>
+                                <li><a href="#">Espejos </a></li>
+                                <li><a href="#">Cuelga macetas</a></li>
+                                <li><a href="#">Sujeta cortinas</a></li>
+                                <li><a href="#">Varios</a></li>
+                                <li><a href="#">Cursos</a></li>
+                              </ul>
+                        </li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Envíos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="bottom-sidebar">
+                    <ul>
+                        <li><a href="productCart"><i class="fas fa-light fa-cart-shopping"></i>Carrito</a></li>
+                        <li><a href="loginForm"><i class="fas fa-regular fa-arrow-right-to-bracket"></i>Login</a></li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="banner">
+                <img src="/img/home-banner.jpg" alt="">
+            </div>
+            <section class="popular-categories">
+                <div class="main-bar">
+                    <p>Categorías populares</p>
+                </div>
+                <div class="img-popular">
+                    <article>
+                        <div>
+                            <img src="/img/tapices/yalin.jpeg" alt="">
+                        </div>
+                        <p>Tapices</p>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="/img/espejos/goldina.jpg" alt="">
+                        </div>
+                        <p>Espejos</p>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="/img/cuelga-macetas/macetero-triple.jpeg" alt="">
+                        </div>
+                        <p>Cuelga macetas</p>
+                    </article>
+                </div>
+            </section>
+            <section class="favorites-products">
+                <div class="main-bar">
+                    <p>Productos favoritos</p>
+                </div>
+                <div class="articles-container">
+                    <div class="fav-products">
+                        <article>
+                            <img src="/img/tapices/eloisa.jpg" alt="">
+                            <div class="details">
+                                <span class="title">Tapiz Eloisa</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/tapices/candela.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Tapiz Candela</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/sujeta-cortina/borla.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Cortinero borla</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/varios/posavasos.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Posavasos</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/tapices/orly.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Tapiz Orly</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/espejos/silvia.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Espejo Silvia</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/cuelga-macetas/cuelga-maceta.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Cuelga macetas</span>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="/img/tapices/gal.jpeg" alt="">
+                            <div class="details">
+                                <span class="title">Tapiz Gal</span>
+                            </div>
+                        </article>
+                    </div>
+                    <button type="button">Ver todos los productos</button>
+                </div>
+            </section>
+        </main>
+        <%- include('./partials/footer.ejs')%>
+        <script>
+            /*Set ancho de sidebar*/
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "300px";
+            }
+
+            /*Set posición de sidebar*/
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+            }
+
+            //Obtener del menú "Categorías" y su submenú
+            const categoriasMenu = document.querySelector('.menu-item');
+            // const submenu = document.querySelector('.submenu');
+
+            //Agrega un evento de clic al elemento del menú "Categorías"
+            categoriasMenu.addEventListener('click', function() {
+                // Alternar la clase "collapsed" en el elemento del menú "Categorías"
+                categoriasMenu.classList.toggle('collapsed');
+            });
+
+            categoriasMenu.addEventListener('click', function() {
+                // Alternar la clase "open" en el elemento del menú "Categorías"
+                categoriasMenu.classList.toggle('open');
+                });
+        </script>
+    </body>
+</html>

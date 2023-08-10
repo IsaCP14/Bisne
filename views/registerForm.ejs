@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bisne macrame | HOME</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/signup.css">
+    
+        <%- include('./partials/header.ejs')%>
+        
+        <body>
+            <%- include('./partials/sidebar.ejs')%>
+
+        <!--Register form --> 
+
+    
+            <div class="form">
+                <form method="POST" action="/user/register" enctype="multipart/form-data">
+                    <div class="inputs">
+                        <div class="input-box">
+                            <label><b>Nombre completo:</b></label>
+                                <input 
+                                    type="text" 
+                                    name="fullName" 
+                                    class="form-control <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.fullName : null %>"
+                                >
+                                <% if (locals.errors && errors.fullName) { %>
+                                    <div class="text-danger">
+                                        <%= errors.fullName.msg %> 
+                                    </div>
+                                <% } %>
+                        </div>
+
+
+
+                        <div class="input-box">
+                            <label><b>Correo electrónico:</b></label>
+                            <input 
+                                type="text" 
+                                name="email" 
+                                class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                                value="<%= locals.oldData ? oldData.email : null %>"
+                                >
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                        
+
+                        <div class="input-box">
+                            <label><b>Contraseña:</b></label>
+                                <input 
+                                type="password" 
+                                name="password" 
+                                class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                            >
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-danger">
+                                    <%= errors.password.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+
+                        <div class="input-box">
+                             <label><b>Ciudad de residencia:</b></label>
+                             <div class="input-box">
+                                <select 
+                                    name="city" 
+                                    class="form-select <%= locals.errors && errors.city ? 'is-invalid' : null %>"
+                                >
+                                    <option value="">Elige tu ciudad de residencia </option>
+                                        <%  
+                                            let cities = ["Barranquilla", "Bogotá", "Bucaramanga", "Cali", "Medellín"];
+                                        %>
+                                        <% for (const oneCity of cities) { %>
+                                            <option 
+                                                value="<%= oneCity %>"
+                                                <%= locals.oldData && (oneCity === oldData.city) ? 'selected' : null %> 
+                                            > <%= oneCity %> </option>
+                                        <% } %>
+                                </select>
+                                    <% if (locals.errors && errors.city) { %>
+                                        <div class="text-danger">
+                                            <%= errors.city.msg %>
+                                        </div>
+                                    <% } %>
+                            </div>
+                        </div>
+                
+                        <div class="input-box">
+                            <label><b>Imagen de perfil:</b></label>
+                            <input 
+                                type="file" 
+                                name="avatar"
+                                class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+                            >
+                            <% if (locals.errors && errors.avatar) { %>
+                                <div class="text-danger">
+                                    <%= errors.avatar.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                    
+                    </div>
+
+                        <div class="col-12 my-5">
+                            <button type="submit" class="btn btn-primary">Crear tu cuenta</button>
+                        </div>
+
+                </form>
+
+
+                    <p>¿Ya tienes tu cuenta? Ingresa <a href="/user/login">aquí</a>.</p>
+            </div>
+
+             
+            <%- include('./partials/footer')%>
+        </body>
+</html>

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Borla",
+        "precio": "1000",
+        "categoria": "Sujeta cortinas",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Doble hoja",
+        "precio": "1100",
+        "categoria": "Sujeta cortinas",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "nombre": "Hoja",
+        "precio": "1500",
+        "categoria": "Sujeta cortinas",
+        "imagen": ""
+    }
+]

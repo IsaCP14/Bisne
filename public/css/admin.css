@@ -1,0 +1,64 @@
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.add-product {
+    display: flex;
+    align-items: center;
+}
+
+.icon-add {
+    background-color: #9F967F;
+    padding: 5px 15px;
+    color: #ebebeb;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.add-product p {
+    text-transform: uppercase;
+    margin-left: 10px;
+    color: #967D71;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+thead {
+    text-transform: uppercase;
+    background-color: #9F967F;
+    color: #ebebeb;
+}
+
+tbody {
+    background-color: #C6C3B9;
+    color: #47453C;
+    margin: 2px 0;
+}
+
+tr {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+tr th:nth-child(2),
+tr td:nth-child(2) {
+    margin-right: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+table a:visited {
+    color: #47453C;
+}

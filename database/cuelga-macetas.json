@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Clásico",
+        "precio": "2500",
+        "categoria": "Cuelga macetas",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Flecos",
+        "precio": "2500",
+        "categoria": "Cuelga macetas",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "nombre": "Nido",
+        "precio": "2500",
+        "categoria": "Cuelga macetas",
+        "imagen": ""
+    }
+]

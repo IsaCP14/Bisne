@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nombre": "Goldina",
+        "precio": "5000",
+        "diámetro": 30,
+        "categoria": "espejos",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Fidela",
+        "precio": "5000",
+        "diámetro": 30,
+        "categoria": "espejos",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "nombre": "Silvia",
+        "precio": "5000",
+        "diámetro": 30,
+        "categoria": "espejos",
+        "imagen": ""
+    }
+]

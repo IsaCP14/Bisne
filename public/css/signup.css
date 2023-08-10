@@ -1,0 +1,39 @@
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.inputs input {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 100%;
+    margin: 10px 15px 15px 0;
+}
+
+.input-box {
+    width: 45%;
+}
+
+form {
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .form {
+        margin: 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}

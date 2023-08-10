@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bisne cupcakes | HOME</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/login.css">
+    
+        <%- include('./partials/header.ejs')%>
+        
+        <body>
+            <%- include('./partials/sidebar.ejs')%>
+
+        <!--New products form --> 
+        
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <h2>Formulario de registro de productos</h2>
+
+
+                    <form method="POST" action="/newProducts" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 my-1">
+                                <div class="form-group">
+                                    <label><b>Nombre del Producto:</b></label>
+                                    <input 
+                                        type="text" 
+                                        name="productName" 
+                                        class="form-control <%= locals.errors && errors.productName ? 'is-invalid' : null %>"
+                                        value="<%= locals.oldData ? oldData.productName : null %>"
+                                    >
+                                    <% if (locals.errors && errors.productName) { %>
+                                        <div class="text-danger">
+                                            <%= errors.productName.msg %> 
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                    
+
+                            <div class="col-md-6 my-1">
+                                <div class="form-group">
+                                    <label><b>Descripcion del Producto:</b></label>
+                                    <input 
+                                        type="text" 
+                                        name="descripcion" 
+                                        class="form-control <%= locals.errors && errors.descripcion ? 'is-invalid' : null %>"
+                                        value="<%= locals.oldData ? oldData.descripcion : null %>"
+                                    >
+                                    <% if (locals.errors && errors.descripcion) { %>
+                                        <div class="text-danger">
+                                            <%= errors.descripcion.msg %>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6 my-1">
+                                <div class="form-group">
+                                    <label><b>Precio del Producto:</b></label>
+                                    <input 
+                                        type="text" 
+                                        name="precio" 
+                                        class="form-control <%= locals.errors && errors.precio ? 'is-invalid' : null %>"
+                                        value="<%= locals.oldData ? oldData.precio : null %>"
+                                    >
+                                    <% if (locals.errors && errors.precio) { %>
+                                        <div class="text-danger">
+                                            <%= errors.precio.msg %>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-6 my-1">
+                                <div class="form-group">
+                                    <label><b>Categoria:</b></label>
+                                    <select 
+                                        name="category" 
+                                        class="form-select <%= locals.errors && errors.category ? 'is-invalid' : null %>"
+                                    >
+                                        <option value="">Elige una categoria </option>
+                                        <%  
+                                            let categories = ["Tapices", "Espejos", "Cuelga Macetas", "Sujeta Cortinas", "Varios", "Cursos"];
+                                        %>
+                                        <% for (const oneCategory of categories) { %>
+                                            <option 
+                                                value="<%= oneCategory %>"
+                                                <%= locals.oldData && (oneCategory === oldData.category) ? 'selected' : null %> 
+                                            > <%= oneCategory %> </option>
+                                        <% } %>
+                                    </select>
+                                    <% if (locals.errors && errors.category) { %>
+                                        <div class="text-danger">
+                                            <%= errors.category.msg %>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="col-md-6 my-1">
+                                <div class="form-group">
+                                    <label><b>Imagen del producto:</b></label>
+                                    <input 
+                                        type="file" 
+                                        name="avatar"
+                                        class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
+                                    >
+                                    <% if (locals.errors && errors.avatar) { %>
+                                        <div class="text-danger">
+                                            <%= errors.avatar.msg %>
+                                        </div>
+                                    <% } %>
+                                </div>
+                            </div>
+                            <div class="col-12 my-5">
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                            </div>
+
+
+
+
+
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+
+          
+        <%- include('./partials/footer')%>
+    </body>
+</html>

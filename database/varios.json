@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "nombre": "Posavaso",
+        "precio": "600",
+        "medida": "16 cm",
+        "categoria": "Varios",
+        "imagen": ""
+    },
+    {
+        "id": 2,
+        "nombre": "Individual",
+        "precio": "4000",
+        "medida": "35 cm",
+        "categoria": "Varios",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "nombre": "Llavero",
+        "precio": "600",
+        "medida": "10 cm",
+        "categoria": "Varios",
+        "imagen": ""
+    },
+    {
+        "id": 4,
+        "nombre": "Lámpara",
+        "precio": "7500",
+        "medida": "225 cm",
+        "categoria": "Varios",
+        "imagen": ""
+    }
+]

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bisne cupcakes | HOME</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/login.css">
+    
+        <%- include('./partials/header.ejs')%>
+        
+        <body>
+            <%- include('./partials/sidebar.ejs')%>
+
+        <!--Login form, revisar los ejs de errors, le tuve que quirar div para que no se dañara el estilo, pero falta que funcione lo del color rojo-->              
+            <div class="form">
+                <form method="post" action="/user/login" >
+                    <div class="form-group">
+                        <label> <b>Correo electrónico: </b></label>
+                        <input 
+                            type="text"    
+                            name="email" 
+                            class="form-control
+                        >
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                        <% } %>
+                
+
+
+            
+
+                    <div class="form-group">
+                        <label> <b> Contraseña:</b></label>
+                        <input 
+                            type="password" 
+                            name="password" 
+                            class="form-control 
+						>
+				        <div class="invalid-feedback">                
+                        </div>          
+                    
+                    <div class="form-group">
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario</label>
+					    </div>
+                    </div>
+                					
+                    <button type="submit">Iniciar sesión</button>
+
+                </form>
+                <p>Si no tienes una cuenta, crea una <a href="/user/register">aquí</a>.</p>
+            </div>
+
+            <%- include('./partials/footer')%>
+        </body>
+</html>

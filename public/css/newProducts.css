@@ -1,0 +1,120 @@
+header nav {
+    height: 40px;
+}
+
+.main-header {
+    background-color: #967D71;
+    color: #ebebeb;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-header p {
+    margin: 0;
+    padding: 6px 0;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+
+
+.inputs input {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 100%;
+    margin: 10px 15px 15px 0;
+}
+
+.input-box {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+}
+
+.form {
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 30px 80px;
+    border-radius: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    min-width: 150px;
+}
+
+.form-group label {
+    color: #47453C;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.form-group input {
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    margin-bottom: 15px;
+    min-width: 150px;
+}
+
+.form button {
+    background-color: #9A6C6C;
+    color: #ebebeb;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 15px 25px;
+    text-transform: uppercase;
+}
+
+.form p {
+    font-size: 15px;
+    color: #47453C;
+}
+
+.form p a {
+    color: #47453C;
+}
+
+.form p a:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+    .form {
+        padding: 20px;
+        margin: 20px 40px;
+    }
+
+    .form p {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .form button {
+        padding: 15px 15px;
+    }
+}
