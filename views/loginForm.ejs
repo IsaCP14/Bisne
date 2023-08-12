@@ -14,38 +14,36 @@
 
         <!--Login form, revisar los ejs de errors, le tuve que quirar div para que no se dañara el estilo, pero falta que funcione lo del color rojo-->              
             <div class="form">
-                <form method="post" action="/user/login" >
+                <form method="POST" action="/user/login" >
                     <div class="form-group">
                         <label> <b>Correo electrónico: </b></label>
                         <input 
                             type="text"    
                             name="email" 
                             class="form-control
-                        >
+                    
                         <% if (locals.errors && errors.email) { %>
-                            <div class="text-danger">
+                            <div class="text-danger" >
                                 <%= errors.email.msg %>
                             </div>
                         <% } %>
-                
-
-
-            
-
+                    
+                    
                     <div class="form-group">
                         <label> <b> Contraseña:</b></label>
                         <input 
                             type="password" 
                             name="password" 
-                            class="form-control 
-						>
+                            class="form-control						>
 				        <div class="invalid-feedback">                
                         </div>          
+                        
                     
                     <div class="form-group">
                         <div class="form-group form-check">
                             <label class="form-check-label">
                             <input type="checkbox" class="form-check-input" name="remember_user">Recordar mi usuario</label>
+                            >
 					    </div>
                     </div>
                 					

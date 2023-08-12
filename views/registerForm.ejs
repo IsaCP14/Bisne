@@ -28,7 +28,7 @@
                                     value="<%= locals.oldData ? oldData.fullName : null %>"
                                 >
                                 <% if (locals.errors && errors.fullName) { %>
-                                    <div class="text-danger">
+                                    <div class="text-danger" style="color: red">
                                         <%= errors.fullName.msg %> 
                                     </div>
                                 <% } %>
@@ -45,7 +45,7 @@
                                 value="<%= locals.oldData ? oldData.email : null %>"
                                 >
                             <% if (locals.errors && errors.email) { %>
-                                <div class="text-danger">
+                                <div class="text-danger" style="color: red">
                                     <%= errors.email.msg %>
                                 </div>
                             <% } %>
@@ -60,7 +60,7 @@
                                 class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                             >
                             <% if (locals.errors && errors.password) { %>
-                                <div class="text-danger">
+                                <div class="text-danger" style="color: red">
                                     <%= errors.password.msg %>
                                 </div>
                             <% } %>
@@ -69,7 +69,7 @@
                         <div class="input-box">
                              <label><b>Ciudad de residencia:</b></label>
                              <div class="input-box">
-                                <select 
+                                <select     
                                     name="city" 
                                     class="form-select <%= locals.errors && errors.city ? 'is-invalid' : null %>"
                                 >
@@ -85,7 +85,7 @@
                                         <% } %>
                                 </select>
                                     <% if (locals.errors && errors.city) { %>
-                                        <div class="text-danger">
+                                        <div class="text-danger" style="color: red;">
                                             <%= errors.city.msg %>
                                         </div>
                                     <% } %>
@@ -100,7 +100,7 @@
                                 class="form-control <%= locals.errors && errors.avatar ? 'is-invalid' : null %>"
                             >
                             <% if (locals.errors && errors.avatar) { %>
-                                <div class="text-danger">
+                                <div class="text-danger" style="color: red";>
                                     <%= errors.avatar.msg %>
                                 </div>
                             <% } %>

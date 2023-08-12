@@ -1,19 +1,20 @@
+const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
-const { 
-	validationResult 
-} = require('express-validator');
-
+const fs = require('fs');
 const User = require('../models/User');
+const path = require('path');
 
 const controller = {
 	register: (req, res) => {
-        return res.render('registerForm');
+        //return res.render(path.resolve(__dirname, '../views/registerForm'));
+		return res.render('registerForm');
     },
 	processRegister: (req, res) => {
 		const resultValidation = validationResult(req);
 		
 		if (resultValidation.errors.length > 0) {
-			return res.render('registerForm', {
+			//return res.render(path.resolve(__dirname, '../views/registerForm'), {
+				return res.render('registerForm',{
 				errors: resultValidation.mapped(),
 				oldData: req.body
 			});
@@ -40,27 +41,11 @@ const controller = {
 		let userCreated = User.create(userToCreate);
 		return res.redirect('/user/login');
 	},
-
-    newProducts: (req, res) => {
-		return res.render('newProducts');
+	
+	login: (req, res) => {
+		return res.render('loginForm');
 	},
-	processNewProducts: (req, res) => {
-		const resultValidation = validationResult(req);
-		
-		if (resultValidation.errors.length > 0) {
-			return res.render('newProducts', {
-				errors: resultValidation.mapped(),
-				oldData: req.body
-			});
-		}
-		return res.send('Ok, las validaciones se pasaron y no tienes errores');
-	},
-  
-    login: (req, res) => {
-      return res.render('loginForm')
-    }, 
-
-    loginProcess: (req,res) => {
+	loginProcess: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);
 		
 		if(userToLogin) {
@@ -72,6 +57,7 @@ const controller = {
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
+
 				return res.redirect('/user/profile');
 			} 
 			return res.render('loginForm', {
@@ -86,13 +72,29 @@ const controller = {
 		return res.render('loginForm', {
 			errors: {
 				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
+					msg: 'No se encuentra este correo en nuestra base de datos'
 				}
 			}
 		});
-
 	},
-	profile: (req, res) => {
+
+    newProducts: (req, res) => {
+		return res.render('newProducts');
+	},
+
+	processNewProducts: (req, res) => {
+		const resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0) {
+			return res.render('newProducts', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+		return res.send('Ok, las validaciones se pasaron y no tienes errores');
+	},
+
+		profile: (req, res) => {
 		return res.render('profile', {
 			user: req.session.userLogged
 		});
